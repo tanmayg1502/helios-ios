@@ -1,9 +1,5 @@
 # Helios for iOS
 
-<!-- setup-bundle-start -->
-Start here: [Pranav’s complete robot-to-phone setup](Documentation/Setup/PRANAV_SETUP.md). The [complete setup bundle](Documentation/Setup/README.md) includes all robot and app guides and is also included in the gateway pull request.
-<!-- setup-bundle-end -->
-
 Native SwiftUI companion for Pranav's Helios rover. The app connects to the companion **mobile_gateway API v1** for fused odometry, a lidar summary, and explicitly enabled managed robot operations. It also includes a separate, explicitly simulated map/telemetry demo. Requires Xcode 26.4, Swift 6.2+ toolchain (Swift 6 language mode), and iOS 26+. No third-party app dependencies.
 
 ## Open and run
@@ -12,7 +8,7 @@ Open `Helios.xcodeproj`, select **Helios**, choose an iPhone/iPad simulator, and
 
 ## Connect to the robot
 
-1. Deploy `src/mobile_gateway` from the companion [upstream PR #1](https://github.com/pran99-git/helios_ws/pull/1). Its [gateway README](https://github.com/tanmayg1502/helios_ws/blob/codex/mobile-telemetry-gateway/src/mobile_gateway/README.md) contains the full ROS setup, topic overrides and TLS reverse-proxy example. This package must exist on the Jetson; the app cannot connect directly to ROS DDS.
+1. Deploy `src/mobile_gateway` from the companion [upstream PR #1](https://github.com/pran99-git/helios_ws/pull/1). Its [gateway README](GATEWAY_SETUP.md) contains the full ROS setup, topic overrides and TLS reverse-proxy example. This package must exist on the Jetson; the app cannot connect directly to ROS DDS.
 2. In the Jetson workspace, build and launch the read-only gateway:
 
    ```sh
@@ -40,7 +36,7 @@ The real hostname, certificate/trust setup, gateway installation, token and runn
 - Labels `source: fixture` responses as simulated. ROS source identifies the adapter, not proof of hardware. The map tab always remains a labeled synthetic illustration; it does not overlay odometry on a real map.
 - HTTPS only off-device. Plain HTTP is accepted only for loopback development. Redirects are refused, credentials stay in memory, cookies/cache are disabled, response bodies are capped at 16 KiB, and requests have finite timeouts. The app never disables certificate validation.
 
-The **Operations** tab now supports 20 repo-backed startup, shutdown, mapping, localization, recovery and diagnostic operations. It uses an explicit expiring control lease, typed parameter forms, confirmations and job/output views. See [OPERATIONS.md](OPERATIONS.md) for the catalog and robot deployment flags. No direct velocity, emergency-stop, navigation-goal, camera, map-stream or battery API is present. This does not claim the rover's autonomy is hardware validated.
+The **Operations** tab now supports 20 repo-backed startup, shutdown, mapping, localization, recovery and diagnostic operations. It uses an explicit expiring control lease, typed parameter forms, confirmations and job/output views. See [OPERATIONS.md](IOS_APP_OPERATIONS.md) for the catalog and robot deployment flags. No direct velocity, emergency-stop, navigation-goal, camera, map-stream or battery API is present. This does not claim the rover's autonomy is hardware validated.
 
 The interface uses an original WHOOP/Tesla-inspired dark instrument-panel design: charcoal surfaces, lime/cyan metrics, a decorative rover schematic, readable status and grouped controls. Demo and fixture data remain explicitly labeled.
 
@@ -85,3 +81,6 @@ The opt-in UI suite types the endpoint/token and exercises connect → live over
 `App/RootView` owns `DemoSession` and `LiveConnection`. Feature views share those observable main-actor models. `GatewayClient` validates configuration, performs bounded authenticated requests and decodes typed API values. `LiveConnection` owns the cancellable polling task; generation checks prevent old responses from repopulating a disconnected/reconfigured screen. The separate `OperationsSession` polls the operation catalog, owns the explicit control lease, scopes cancellable HTTP requests, and retains command outcomes separately from connection status. No hardware networking code is coupled to the demo model. `GatewayOdometry` and `GatewayScan` enforce freshness for presentation.
 
 `INTEGRATION.md` records the original upstream source audit, ROS contracts and future requirements for map transforms or control. `VALIDATION.md` records checks performed and their limits.
+
+---
+This file is part of the mirrored [Helios setup bundle](README.md). Shell commands and source paths refer to the original app or robot repository root, as specified in the guide.
