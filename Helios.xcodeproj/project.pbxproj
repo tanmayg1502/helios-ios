@@ -1,0 +1,723 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00F4BBACC7E4A65D2C47D6F4 /* OperationJobResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48330EF950486C01DFC0DE35 /* OperationJobResponse.swift */; };
+		0654C4060497ABE242D112B7 /* GatewayOdometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4C417CFA9E634229EFCD4F /* GatewayOdometry.swift */; };
+		1E2E16214021F4A351CAEC2C /* LiveDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7D1E1A7EEDA284C514E88 /* LiveDashboardView.swift */; };
+		213FC4ED4CFE3164BC58B0F2 /* DemoSessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FCCAA01CC60A8B93AD33CB /* DemoSessionTests.swift */; };
+		23E8C77F4A21D42E4BADA12C /* ConnectionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5883963317B6AC14AAAF43EF /* ConnectionStatus.swift */; };
+		2DFBE0C0D80DBEE3BE554686 /* GatewayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E2D182226B0DD5BF14EBED /* GatewayUITests.swift */; };
+		30C5B71B98898ACC60A2504E /* OperationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCF407F8F3C388FC24CFCF1 /* OperationDetailView.swift */; };
+		32C43E529E6D2D7F3E99562F /* HeliosMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5A9376C245986973A4B474 /* HeliosMetric.swift */; };
+		3BF7E31AC8238EF18CC977E7 /* DemoBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A1F4BD0F06A13247D0E71D /* DemoBanner.swift */; };
+		3E8965E5FCD295DD5B1CE211 /* GatewaySnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = D714B58B310205AFFA7E9723 /* GatewaySnapshot.swift */; };
+		453A31CE80AA2B7284318AED /* HeliosTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F840961C3D5FCBB33EDE018 /* HeliosTheme.swift */; };
+		4E58FB09EF9077FC3663CB65 /* TelemetryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAB725F8EA53D7CE0A6CC5E /* TelemetryRow.swift */; };
+		59E5BD73B5412A4BDD15B1C4 /* OperationParameterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0654284AF1C907F3A8D7E7D /* OperationParameterView.swift */; };
+		5D9425F61BAA1A17778DBBF4 /* RobotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496D4DCD640E4E86D97CE304 /* RobotView.swift */; };
+		5E4D6822E41A11529815B177 /* OperationJobsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863660D9CF55C0E28E1C9AD7 /* OperationJobsResponse.swift */; };
+		5FD87CD1DDB972B06BB36FA2 /* OperationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B591BDA6C35D7559622784A0 /* OperationsView.swift */; };
+		60178C6AFC24FFF272A13FAF /* RobotOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1370970E2D0027430AA1944E /* RobotOperation.swift */; };
+		6203F22193023BA3FE7A7F42 /* LiveConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D9AAE7B5D93D6528221795 /* LiveConnection.swift */; };
+		6211297AE1116F5E238A9B87 /* HeliosSectionHeading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783FE775EC0406549D157586 /* HeliosSectionHeading.swift */; };
+		63F8AAE7B6CA74B5F3243786 /* OperationValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CC9F2745B45376D3FCCBA2 /* OperationValue.swift */; };
+		685C3CF0694F8A41004E44E1 /* GatewayError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BD0A2F2C032592820F571D /* GatewayError.swift */; };
+		6CA13060496EF42344D1EEA4 /* ControlLeaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4703CAECC95D0A6374AFBF /* ControlLeaseResponse.swift */; };
+		73201C890DD0F9FCEC191076 /* GatewayScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0053E43DC319121D66CB1E41 /* GatewayScan.swift */; };
+		7703F300F28DFA8368A0122F /* OperationsStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548A0EA673C213BB1B4FBDE3 /* OperationsStatusView.swift */; };
+		7A001305D4138CF32EC7396A /* OperationParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95408F5FFF9EFE0381EAE976 /* OperationParameter.swift */; };
+		7CD523A1FD40C119C8ED382E /* GatewayRequestScope.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F5B88BA51FAAF47DEDDFAA /* GatewayRequestScope.swift */; };
+		7F9E5592291FA52DF7FC4872 /* Telemetry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53BEE6AF72A89CCB796A435 /* Telemetry.swift */; };
+		89CE8705F0F2AC848B856905 /* MapCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DDFC1F3748E1B103C76E16 /* MapCanvas.swift */; };
+		8BDC488EEEFDF7BB4A51C977 /* OperationCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC96A682411459460E039D97 /* OperationCatalog.swift */; };
+		8C3B48C1B76F9557F963805A /* ControlLease.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F10B34E4030634CE256F2E3 /* ControlLease.swift */; };
+		9FA22B8D4C353C79105FAA88 /* OperationsSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DED8FACE48329169F54749F /* OperationsSession.swift */; };
+		A6CA1332FF9ECDA8BFDF28CB /* GatewayClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A4CF6A9FF9D85724D0F819 /* GatewayClient.swift */; };
+		AD9B9D6C3E9A4164DC687B56 /* OperationJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07D97848E91F084164202A3 /* OperationJob.swift */; };
+		C08DCBA530A73F3AAA6F468B /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2892C0BBF86B0945F89138C /* RootView.swift */; };
+		C1254A2D3014F8C89357FB66 /* GatewayFailure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E88ACBC5C774CE858A3BC95 /* GatewayFailure.swift */; };
+		C1D770A48A91F71ADC9E2446 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29D2057CAAAF7C47199039F /* MapView.swift */; };
+		C2A0BA0012374337FA395782 /* DemoSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4963805930B547374923815C /* DemoSession.swift */; };
+		C6913E1F3CFEDFB44E7C2CEB /* OperationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10682CC2627C42639999034 /* OperationsTests.swift */; };
+		CBB24E52FA92F38199F11001 /* NoRedirectDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08E477F11EA42058C2453D6 /* NoRedirectDelegate.swift */; };
+		D4AF9D95857DBF9C1E6A608F /* HeliosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B9726ABB1A098EEEC53A00 /* HeliosApp.swift */; };
+		D8B41A9E39FDB7562C9D5C0E /* OperationJobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD90B9BAA5FA650086F9D3D /* OperationJobView.swift */; };
+		DB59156FAC0D563F41346F3B /* HeliosRoverIllustration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5A2CF792411A924E2E9EB7 /* HeliosRoverIllustration.swift */; };
+		DD3FB2CA60C10FBA0F35B9FF /* ControlRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11E915B50D29C03F649D272 /* ControlRequest.swift */; };
+		DFA9CACA95B5A9F8048744E0 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D6080B20CB0302EC679DB1 /* DashboardView.swift */; };
+		EA3ADF23D66D9D34084133F3 /* GatewayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4013B96A7E5CEB3747F63B23 /* GatewayTests.swift */; };
+		F3473591260B13C72E900C2A /* ConnectionField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64522834E1C3420E97B56DD /* ConnectionField.swift */; };
+		F82A30F1C45C90558F46101A /* OperationStartRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A642CC58E1D063AF2B477B9 /* OperationStartRequest.swift */; };
+		FDA81D40B2BA7F7865F536D8 /* ConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B879764F6938CD0675714FB5 /* ConnectionView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		72AFEEA77ED0C2C89A9BCC7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC4606DDCD5D2CD35E4A3A5F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5BABB8BA45906F527341590;
+			remoteInfo = Helios;
+		};
+		B9296CECC2F879FF1D94C3A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC4606DDCD5D2CD35E4A3A5F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5BABB8BA45906F527341590;
+			remoteInfo = Helios;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0053E43DC319121D66CB1E41 /* GatewayScan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatewayScan.swift; sourceTree = "<group>"; };
+		0DED8FACE48329169F54749F /* OperationsSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationsSession.swift; sourceTree = "<group>"; };
+		12A7D1E1A7EEDA284C514E88 /* LiveDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveDashboardView.swift; sourceTree = "<group>"; };
+		1370970E2D0027430AA1944E /* RobotOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotOperation.swift; sourceTree = "<group>"; };
+		1DD90B9BAA5FA650086F9D3D /* OperationJobView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationJobView.swift; sourceTree = "<group>"; };
+		4013B96A7E5CEB3747F63B23 /* GatewayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatewayTests.swift; sourceTree = "<group>"; };
+		45CC9F2745B45376D3FCCBA2 /* OperationValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationValue.swift; sourceTree = "<group>"; };
+		48330EF950486C01DFC0DE35 /* OperationJobResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationJobResponse.swift; sourceTree = "<group>"; };
+		48BD0A2F2C032592820F571D /* GatewayError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatewayError.swift; sourceTree = "<group>"; };
+		4963805930B547374923815C /* DemoSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoSession.swift; sourceTree = "<group>"; };
+		496D4DCD640E4E86D97CE304 /* RobotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotView.swift; sourceTree = "<group>"; };
+		4AAB725F8EA53D7CE0A6CC5E /* TelemetryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelemetryRow.swift; sourceTree = "<group>"; };
+		4DCF407F8F3C388FC24CFCF1 /* OperationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationDetailView.swift; sourceTree = "<group>"; };
+		51A4CF6A9FF9D85724D0F819 /* GatewayClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatewayClient.swift; sourceTree = "<group>"; };
+		548A0EA673C213BB1B4FBDE3 /* OperationsStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationsStatusView.swift; sourceTree = "<group>"; };
+		56E2D182226B0DD5BF14EBED /* GatewayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatewayUITests.swift; sourceTree = "<group>"; };
+		5883963317B6AC14AAAF43EF /* ConnectionStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionStatus.swift; sourceTree = "<group>"; };
+		5E88ACBC5C774CE858A3BC95 /* GatewayFailure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatewayFailure.swift; sourceTree = "<group>"; };
+		60A1F4BD0F06A13247D0E71D /* DemoBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoBanner.swift; sourceTree = "<group>"; };
+		71DDFC1F3748E1B103C76E16 /* MapCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCanvas.swift; sourceTree = "<group>"; };
+		783FE775EC0406549D157586 /* HeliosSectionHeading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeliosSectionHeading.swift; sourceTree = "<group>"; };
+		7BC42C25E075D4BA86A88215 /* HeliosUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = HeliosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F4C417CFA9E634229EFCD4F /* GatewayOdometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatewayOdometry.swift; sourceTree = "<group>"; };
+		7F840961C3D5FCBB33EDE018 /* HeliosTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeliosTheme.swift; sourceTree = "<group>"; };
+		85D6080B20CB0302EC679DB1 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		863660D9CF55C0E28E1C9AD7 /* OperationJobsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationJobsResponse.swift; sourceTree = "<group>"; };
+		8A19BA7A197DC9F051420D8B /* Helios.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Helios.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F10B34E4030634CE256F2E3 /* ControlLease.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlLease.swift; sourceTree = "<group>"; };
+		95408F5FFF9EFE0381EAE976 /* OperationParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationParameter.swift; sourceTree = "<group>"; };
+		9A642CC58E1D063AF2B477B9 /* OperationStartRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationStartRequest.swift; sourceTree = "<group>"; };
+		A07D97848E91F084164202A3 /* OperationJob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationJob.swift; sourceTree = "<group>"; };
+		A11E915B50D29C03F649D272 /* ControlRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlRequest.swift; sourceTree = "<group>"; };
+		A7B9726ABB1A098EEEC53A00 /* HeliosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeliosApp.swift; sourceTree = "<group>"; };
+		AB4703CAECC95D0A6374AFBF /* ControlLeaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlLeaseResponse.swift; sourceTree = "<group>"; };
+		AC96A682411459460E039D97 /* OperationCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationCatalog.swift; sourceTree = "<group>"; };
+		B08E477F11EA42058C2453D6 /* NoRedirectDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoRedirectDelegate.swift; sourceTree = "<group>"; };
+		B0FCCAA01CC60A8B93AD33CB /* DemoSessionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoSessionTests.swift; sourceTree = "<group>"; };
+		B10682CC2627C42639999034 /* OperationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationsTests.swift; sourceTree = "<group>"; };
+		B2892C0BBF86B0945F89138C /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		B591BDA6C35D7559622784A0 /* OperationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationsView.swift; sourceTree = "<group>"; };
+		B708F208795532FEE85BF817 /* HeliosTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = HeliosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B879764F6938CD0675714FB5 /* ConnectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionView.swift; sourceTree = "<group>"; };
+		BF5A2CF792411A924E2E9EB7 /* HeliosRoverIllustration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeliosRoverIllustration.swift; sourceTree = "<group>"; };
+		C29D2057CAAAF7C47199039F /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		D714B58B310205AFFA7E9723 /* GatewaySnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatewaySnapshot.swift; sourceTree = "<group>"; };
+		E64522834E1C3420E97B56DD /* ConnectionField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionField.swift; sourceTree = "<group>"; };
+		EC5A9376C245986973A4B474 /* HeliosMetric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeliosMetric.swift; sourceTree = "<group>"; };
+		F0654284AF1C907F3A8D7E7D /* OperationParameterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationParameterView.swift; sourceTree = "<group>"; };
+		F2D9AAE7B5D93D6528221795 /* LiveConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveConnection.swift; sourceTree = "<group>"; };
+		F3962A2FF5F5DDBD80DC6496 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F4F5B88BA51FAAF47DEDDFAA /* GatewayRequestScope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatewayRequestScope.swift; sourceTree = "<group>"; };
+		F53BEE6AF72A89CCB796A435 /* Telemetry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Telemetry.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0E5B581969026BBB03388C80 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				4DCF407F8F3C388FC24CFCF1 /* OperationDetailView.swift */,
+				1DD90B9BAA5FA650086F9D3D /* OperationJobView.swift */,
+				F0654284AF1C907F3A8D7E7D /* OperationParameterView.swift */,
+				548A0EA673C213BB1B4FBDE3 /* OperationsStatusView.swift */,
+				B591BDA6C35D7559622784A0 /* OperationsView.swift */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		1AC9DFFFD45C458D3C955B41 = {
+			isa = PBXGroup;
+			children = (
+				A1A94C2C54ADDF6729C607D7 /* Helios */,
+				928EF21A9CAA41D242BE1C7B /* HeliosTests */,
+				B249795475B7CB88215EA2D3 /* HeliosUITests */,
+				9A7AB21A50ABF33D9BD6020E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		68FEDDF2F2FEAEC2CC9AD52B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A7B9726ABB1A098EEEC53A00 /* HeliosApp.swift */,
+				B2892C0BBF86B0945F89138C /* RootView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		7EF205565AE17DDF17648C0A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				5883963317B6AC14AAAF43EF /* ConnectionStatus.swift */,
+				51A4CF6A9FF9D85724D0F819 /* GatewayClient.swift */,
+				48BD0A2F2C032592820F571D /* GatewayError.swift */,
+				5E88ACBC5C774CE858A3BC95 /* GatewayFailure.swift */,
+				7F4C417CFA9E634229EFCD4F /* GatewayOdometry.swift */,
+				F4F5B88BA51FAAF47DEDDFAA /* GatewayRequestScope.swift */,
+				0053E43DC319121D66CB1E41 /* GatewayScan.swift */,
+				D714B58B310205AFFA7E9723 /* GatewaySnapshot.swift */,
+				F2D9AAE7B5D93D6528221795 /* LiveConnection.swift */,
+				B08E477F11EA42058C2453D6 /* NoRedirectDelegate.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		8166CD37659AD363E49FA012 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				8F10B34E4030634CE256F2E3 /* ControlLease.swift */,
+				AB4703CAECC95D0A6374AFBF /* ControlLeaseResponse.swift */,
+				A11E915B50D29C03F649D272 /* ControlRequest.swift */,
+				AC96A682411459460E039D97 /* OperationCatalog.swift */,
+				A07D97848E91F084164202A3 /* OperationJob.swift */,
+				48330EF950486C01DFC0DE35 /* OperationJobResponse.swift */,
+				863660D9CF55C0E28E1C9AD7 /* OperationJobsResponse.swift */,
+				95408F5FFF9EFE0381EAE976 /* OperationParameter.swift */,
+				0DED8FACE48329169F54749F /* OperationsSession.swift */,
+				9A642CC58E1D063AF2B477B9 /* OperationStartRequest.swift */,
+				45CC9F2745B45376D3FCCBA2 /* OperationValue.swift */,
+				1370970E2D0027430AA1944E /* RobotOperation.swift */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		928EF21A9CAA41D242BE1C7B /* HeliosTests */ = {
+			isa = PBXGroup;
+			children = (
+				B0FCCAA01CC60A8B93AD33CB /* DemoSessionTests.swift */,
+				4013B96A7E5CEB3747F63B23 /* GatewayTests.swift */,
+				B10682CC2627C42639999034 /* OperationsTests.swift */,
+			);
+			path = HeliosTests;
+			sourceTree = "<group>";
+		};
+		9A7AB21A50ABF33D9BD6020E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8A19BA7A197DC9F051420D8B /* Helios.app */,
+				B708F208795532FEE85BF817 /* HeliosTests.xctest */,
+				7BC42C25E075D4BA86A88215 /* HeliosUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A0577344D1A1AC6B5614023F /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				EC5A9376C245986973A4B474 /* HeliosMetric.swift */,
+				BF5A2CF792411A924E2E9EB7 /* HeliosRoverIllustration.swift */,
+				783FE775EC0406549D157586 /* HeliosSectionHeading.swift */,
+				7F840961C3D5FCBB33EDE018 /* HeliosTheme.swift */,
+			);
+			path = Design;
+			sourceTree = "<group>";
+		};
+		A1A94C2C54ADDF6729C607D7 /* Helios */ = {
+			isa = PBXGroup;
+			children = (
+				F3962A2FF5F5DDBD80DC6496 /* Info.plist */,
+				68FEDDF2F2FEAEC2CC9AD52B /* App */,
+				A0577344D1A1AC6B5614023F /* Design */,
+				F781C53691A3D9A119412AA8 /* Features */,
+				FA4DA227D88E2F49327EE3EA /* Models */,
+				7EF205565AE17DDF17648C0A /* Networking */,
+				8166CD37659AD363E49FA012 /* Operations */,
+			);
+			path = Helios;
+			sourceTree = "<group>";
+		};
+		B249795475B7CB88215EA2D3 /* HeliosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				56E2D182226B0DD5BF14EBED /* GatewayUITests.swift */,
+			);
+			path = HeliosUITests;
+			sourceTree = "<group>";
+		};
+		F781C53691A3D9A119412AA8 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				E64522834E1C3420E97B56DD /* ConnectionField.swift */,
+				B879764F6938CD0675714FB5 /* ConnectionView.swift */,
+				85D6080B20CB0302EC679DB1 /* DashboardView.swift */,
+				60A1F4BD0F06A13247D0E71D /* DemoBanner.swift */,
+				12A7D1E1A7EEDA284C514E88 /* LiveDashboardView.swift */,
+				71DDFC1F3748E1B103C76E16 /* MapCanvas.swift */,
+				C29D2057CAAAF7C47199039F /* MapView.swift */,
+				496D4DCD640E4E86D97CE304 /* RobotView.swift */,
+				4AAB725F8EA53D7CE0A6CC5E /* TelemetryRow.swift */,
+				0E5B581969026BBB03388C80 /* Operations */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		FA4DA227D88E2F49327EE3EA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4963805930B547374923815C /* DemoSession.swift */,
+				F53BEE6AF72A89CCB796A435 /* Telemetry.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1F7D68188A4D709B24E58D1C /* HeliosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADF5883046F837F1522E3500 /* Build configuration list for PBXNativeTarget "HeliosUITests" */;
+			buildPhases = (
+				B7FB0D82174A3A441A019CD1 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3B0F5303C4C2923AA30F2F75 /* PBXTargetDependency */,
+			);
+			name = HeliosUITests;
+			packageProductDependencies = (
+			);
+			productName = HeliosUITests;
+			productReference = 7BC42C25E075D4BA86A88215 /* HeliosUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		C100E71F8561E6B62EC7FB95 /* HeliosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D189EDD0BB987F4980BB34F5 /* Build configuration list for PBXNativeTarget "HeliosTests" */;
+			buildPhases = (
+				9305DDF520A25D0ED84CE301 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				162B2D348D3CB425AC65D6DA /* PBXTargetDependency */,
+			);
+			name = HeliosTests;
+			packageProductDependencies = (
+			);
+			productName = HeliosTests;
+			productReference = B708F208795532FEE85BF817 /* HeliosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F5BABB8BA45906F527341590 /* Helios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C430F015902F36F71CE8A2FA /* Build configuration list for PBXNativeTarget "Helios" */;
+			buildPhases = (
+				755D04FF0715939B1DC2F6B4 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Helios;
+			packageProductDependencies = (
+			);
+			productName = Helios;
+			productReference = 8A19BA7A197DC9F051420D8B /* Helios.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC4606DDCD5D2CD35E4A3A5F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					1F7D68188A4D709B24E58D1C = {
+						TestTargetID = F5BABB8BA45906F527341590;
+					};
+				};
+			};
+			buildConfigurationList = 90076089BA19EBD38808F4AD /* Build configuration list for PBXProject "Helios" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 1AC9DFFFD45C458D3C955B41;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 9A7AB21A50ABF33D9BD6020E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F5BABB8BA45906F527341590 /* Helios */,
+				C100E71F8561E6B62EC7FB95 /* HeliosTests */,
+				1F7D68188A4D709B24E58D1C /* HeliosUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		755D04FF0715939B1DC2F6B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3473591260B13C72E900C2A /* ConnectionField.swift in Sources */,
+				23E8C77F4A21D42E4BADA12C /* ConnectionStatus.swift in Sources */,
+				FDA81D40B2BA7F7865F536D8 /* ConnectionView.swift in Sources */,
+				8C3B48C1B76F9557F963805A /* ControlLease.swift in Sources */,
+				6CA13060496EF42344D1EEA4 /* ControlLeaseResponse.swift in Sources */,
+				DD3FB2CA60C10FBA0F35B9FF /* ControlRequest.swift in Sources */,
+				DFA9CACA95B5A9F8048744E0 /* DashboardView.swift in Sources */,
+				3BF7E31AC8238EF18CC977E7 /* DemoBanner.swift in Sources */,
+				C2A0BA0012374337FA395782 /* DemoSession.swift in Sources */,
+				A6CA1332FF9ECDA8BFDF28CB /* GatewayClient.swift in Sources */,
+				685C3CF0694F8A41004E44E1 /* GatewayError.swift in Sources */,
+				C1254A2D3014F8C89357FB66 /* GatewayFailure.swift in Sources */,
+				0654C4060497ABE242D112B7 /* GatewayOdometry.swift in Sources */,
+				7CD523A1FD40C119C8ED382E /* GatewayRequestScope.swift in Sources */,
+				73201C890DD0F9FCEC191076 /* GatewayScan.swift in Sources */,
+				3E8965E5FCD295DD5B1CE211 /* GatewaySnapshot.swift in Sources */,
+				D4AF9D95857DBF9C1E6A608F /* HeliosApp.swift in Sources */,
+				32C43E529E6D2D7F3E99562F /* HeliosMetric.swift in Sources */,
+				DB59156FAC0D563F41346F3B /* HeliosRoverIllustration.swift in Sources */,
+				6211297AE1116F5E238A9B87 /* HeliosSectionHeading.swift in Sources */,
+				453A31CE80AA2B7284318AED /* HeliosTheme.swift in Sources */,
+				6203F22193023BA3FE7A7F42 /* LiveConnection.swift in Sources */,
+				1E2E16214021F4A351CAEC2C /* LiveDashboardView.swift in Sources */,
+				89CE8705F0F2AC848B856905 /* MapCanvas.swift in Sources */,
+				C1D770A48A91F71ADC9E2446 /* MapView.swift in Sources */,
+				CBB24E52FA92F38199F11001 /* NoRedirectDelegate.swift in Sources */,
+				8BDC488EEEFDF7BB4A51C977 /* OperationCatalog.swift in Sources */,
+				30C5B71B98898ACC60A2504E /* OperationDetailView.swift in Sources */,
+				AD9B9D6C3E9A4164DC687B56 /* OperationJob.swift in Sources */,
+				00F4BBACC7E4A65D2C47D6F4 /* OperationJobResponse.swift in Sources */,
+				D8B41A9E39FDB7562C9D5C0E /* OperationJobView.swift in Sources */,
+				5E4D6822E41A11529815B177 /* OperationJobsResponse.swift in Sources */,
+				7A001305D4138CF32EC7396A /* OperationParameter.swift in Sources */,
+				59E5BD73B5412A4BDD15B1C4 /* OperationParameterView.swift in Sources */,
+				F82A30F1C45C90558F46101A /* OperationStartRequest.swift in Sources */,
+				63F8AAE7B6CA74B5F3243786 /* OperationValue.swift in Sources */,
+				9FA22B8D4C353C79105FAA88 /* OperationsSession.swift in Sources */,
+				7703F300F28DFA8368A0122F /* OperationsStatusView.swift in Sources */,
+				5FD87CD1DDB972B06BB36FA2 /* OperationsView.swift in Sources */,
+				60178C6AFC24FFF272A13FAF /* RobotOperation.swift in Sources */,
+				5D9425F61BAA1A17778DBBF4 /* RobotView.swift in Sources */,
+				C08DCBA530A73F3AAA6F468B /* RootView.swift in Sources */,
+				7F9E5592291FA52DF7FC4872 /* Telemetry.swift in Sources */,
+				4E58FB09EF9077FC3663CB65 /* TelemetryRow.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9305DDF520A25D0ED84CE301 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				213FC4ED4CFE3164BC58B0F2 /* DemoSessionTests.swift in Sources */,
+				EA3ADF23D66D9D34084133F3 /* GatewayTests.swift in Sources */,
+				C6913E1F3CFEDFB44E7C2CEB /* OperationsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7FB0D82174A3A441A019CD1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DFBE0C0D80DBEE3BE554686 /* GatewayUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		162B2D348D3CB425AC65D6DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5BABB8BA45906F527341590 /* Helios */;
+			targetProxy = 72AFEEA77ED0C2C89A9BCC7E /* PBXContainerItemProxy */;
+		};
+		3B0F5303C4C2923AA30F2F75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5BABB8BA45906F527341590 /* Helios */;
+			targetProxy = B9296CECC2F879FF1D94C3A5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		09FB88B78710F53FC7438E89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pranav.helios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		42FD2F27EBABEE3EAF28EF7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pranav.helios.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Helios;
+			};
+			name = Release;
+		};
+		903EE83591DB37DCEC8B5B7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pranav.helios.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Helios.app/Helios";
+			};
+			name = Debug;
+		};
+		99E54D9F9BE5CA2693505A7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Helios/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Helios;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AF276DEB7CC4A223B8BAC71B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pranav.helios.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Helios;
+			};
+			name = Debug;
+		};
+		B59B69D9E973158F0E335FF9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pranav.helios.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Helios.app/Helios";
+			};
+			name = Release;
+		};
+		BEF94318A1B4A87B5C5BFAFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Helios/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Helios;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DF678008F2665F81FBFD02A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pranav.helios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		90076089BA19EBD38808F4AD /* Build configuration list for PBXProject "Helios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF678008F2665F81FBFD02A7 /* Debug */,
+				09FB88B78710F53FC7438E89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		ADF5883046F837F1522E3500 /* Build configuration list for PBXNativeTarget "HeliosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF276DEB7CC4A223B8BAC71B /* Debug */,
+				42FD2F27EBABEE3EAF28EF7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C430F015902F36F71CE8A2FA /* Build configuration list for PBXNativeTarget "Helios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99E54D9F9BE5CA2693505A7B /* Debug */,
+				BEF94318A1B4A87B5C5BFAFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D189EDD0BB987F4980BB34F5 /* Build configuration list for PBXNativeTarget "HeliosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				903EE83591DB37DCEC8B5B7C /* Debug */,
+				B59B69D9E973158F0E335FF9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EC4606DDCD5D2CD35E4A3A5F /* Project object */;
+}
