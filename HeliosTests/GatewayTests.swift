@@ -52,7 +52,8 @@ struct GatewayTests {
         #expect(connection.snapshot == nil)
         #expect(!connection.isEnabled)
         connection.showDemo()
-        #expect(!connection.useLive)
+        #expect(connection.useLive)
+        #expect(!connection.developerMode)
         #expect(connection.snapshot == nil)
     }
 }

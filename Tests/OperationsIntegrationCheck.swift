@@ -7,7 +7,7 @@ import Foundation
         guard let endpoint = env["HELIOS_TEST_ENDPOINT"], let token = env["HELIOS_GATEWAY_TOKEN"] else {
             fatalError("Fixture endpoint and token are required")
         }
-        let client = try GatewayClient(endpoint: endpoint, token: token)
+        let client = try GatewayClient(endpoint: endpoint, token: token, dataMode: .fixture)
         let initial: OperationCatalog = try await client.request(path: "v1/operations")
         precondition(initial.source == "fixture" && initial.commandsEnabled, "Only a simulated fixture may be tested")
         let session = OperationsSession()

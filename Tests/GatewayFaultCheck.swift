@@ -6,6 +6,10 @@ import Foundation
         guard let delayed = env["HELIOS_DELAYED_ENDPOINT"], let retry = env["HELIOS_RETRY_ENDPOINT"],
               let token = env["HELIOS_GATEWAY_TOKEN"] else { fatalError("Fault fixture environment is required") }
         let connection = LiveConnection()
+        let access = DeveloperAccess()
+        await access.verify()
+        connection.setDeveloperMode(true, access: access)
+        precondition(connection.developerMode)
         connection.connect(endpoint: delayed, token: token)
         try await waitUntil { connection.status == .connected }
         guard let snapshot = connection.snapshot, let baseline = connection.receivedAt else { fatalError("No response") }

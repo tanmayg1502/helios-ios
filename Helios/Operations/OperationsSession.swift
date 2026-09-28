@@ -107,6 +107,10 @@ final class OperationsSession {
             }
         } catch {
             guard current == generation, !Task.isCancelled else { return }
+            catalog = []
+            jobs = []
+            source = nil
+            commandsEnabled = false
             isConnected = false
             keepControl = false
             leaseDeadline = nil
