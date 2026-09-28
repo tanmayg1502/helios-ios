@@ -19,7 +19,7 @@ struct OperationsTests {
     @Test func cancelledScopeRejectsLaterRequests() async throws {
         let scope = GatewayRequestScope()
         scope.cancel()
-        let client = try GatewayClient(endpoint: "http://localhost:1", token: String(repeating: "a", count: 32))
+        let client = try GatewayClient(endpoint: "https://localhost:1", token: String(repeating: "a", count: 32))
         do {
             let _: ControlLeaseResponse = try await client.request(path: "v1/control/heartbeat", method: "POST", scope: scope)
             Issue.record("Cancelled scope sent a request")

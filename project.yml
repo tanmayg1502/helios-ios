@@ -1,8 +1,15 @@
 name: Helios
+configs:
+  Debug: debug
+  Release: release
+  TestFlight: release
 options:
   deploymentTarget:
     iOS: '26.0'
 settings:
+  configs:
+    TestFlight:
+      SWIFT_ACTIVE_COMPILATION_CONDITIONS: "$(inherited) TESTFLIGHT_DEVELOPER_TOOLS"
   base:
     SWIFT_VERSION: '6.0'
     PRODUCT_BUNDLE_IDENTIFIER: com.pranav.helios
@@ -58,3 +65,11 @@ schemes:
         Helios: all
     test:
       targets: [HeliosUITests]
+  HeliosTestFlight:
+    build:
+      targets:
+        Helios: all
+    run:
+      config: TestFlight
+    archive:
+      config: TestFlight

@@ -48,8 +48,8 @@ def main():
     try:
         with tempfile.TemporaryDirectory(prefix="helios-fault-check-") as temporary:
             binary = Path(temporary) / "fault-check"
-            sources = sorted((root / "Helios/Networking").glob("*.swift")) + sorted((root / "Helios/Operations").glob("*.swift"))
-            subprocess.run(["swiftc", "-swift-version", "6", *map(str, sources),
+            sources = sorted((root / "Helios/Development").glob("*.swift")) + sorted((root / "Helios/Networking").glob("*.swift")) + sorted((root / "Helios/Operations").glob("*.swift"))
+            subprocess.run(["swiftc", "-D", "DEBUG", "-swift-version", "6", *map(str, sources),
                             str(root / "Tests/GatewayFaultCheck.swift"), "-o", str(binary)], check=True)
             timer = threading.Timer(8, start_recovered)
             timer.start()

@@ -9,7 +9,8 @@ final class LiveConnection {
     private(set) var receivedAt: ContinuousClock.Instant?
     private(set) var detail = "Connect to a deployed Helios gateway."
     private(set) var isEnabled = false
-    var useLive = false
+    private(set) var useLive = true
+    private(set) var developerMode = false
     @ObservationIgnored private var client: GatewayClient?
     @ObservationIgnored private var polling: Task<Void, Never>?
     @ObservationIgnored private var generation = UUID()
@@ -21,7 +22,7 @@ final class LiveConnection {
         receivedAt = nil
         useLive = true
         do {
-            client = try GatewayClient(endpoint: endpoint, token: token)
+            client = try GatewayClient(endpoint: endpoint, token: token, dataMode: developerMode ? .fixture : .robot)
             isEnabled = true
             if let client { operations.connect(client) }
             startPolling()
@@ -44,7 +45,14 @@ final class LiveConnection {
         detail = "Disconnected. No telemetry is being received."
     }
 
+    func setDeveloperMode(_ enabled: Bool, access: DeveloperAccess) {
+        disconnect()
+        developerMode = enabled && access.isAvailable
+        useLive = !developerMode
+    }
+
     func showDemo() {
+        guard developerMode else { return }
         disconnect()
         useLive = false
     }

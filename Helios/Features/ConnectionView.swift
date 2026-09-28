@@ -2,6 +2,8 @@ import SwiftUI
 
 struct ConnectionView: View {
     @Bindable var connection: LiveConnection
+    let developerAccess: DeveloperAccess
+    @State private var showDeveloperConfirmation = false
     @State private var endpoint = ""
     @State private var token = ""
     @FocusState private var focusedField: ConnectionField?
@@ -30,16 +32,33 @@ struct ConnectionView: View {
                 Text(connection.detail).foregroundStyle(.secondary)
                 Text("Telemetry connects here. Open Operations to acquire control and run supported robot commands.")
             }
-            Section("Offline preview") {
-                Button("Use demo mode", systemImage: "play.rectangle", action: connection.showDemo)
-                Text("Map illustrations remain demo-only. Operations require a connected gateway; this local preview never sends commands.")
-                    .font(.footnote).foregroundStyle(.secondary)
+            if developerAccess.isAvailable {
+                Section("Developer tools") {
+                    if connection.developerMode {
+                        Text("Simulation only. Only a fixture gateway can connect. Real robot controls are unavailable.")
+                        Button("Use local sample", systemImage: "play.rectangle", action: connection.showDemo)
+                        Button("Return to real robot mode", systemImage: "antenna.radiowaves.left.and.right", action: leaveDeveloperMode)
+                    } else {
+                        Button("Enable developer mode", systemImage: "testtube.2", action: requestDeveloperMode)
+                            .confirmationDialog("Enable simulation tools?", isPresented: $showDeveloperConfirmation, titleVisibility: .visible) {
+                                Button("Enable simulation", action: enterDeveloperMode)
+                            } message: {
+                                Text("This disconnects the robot. Samples and fixture commands are simulated. Verify any previous robot work has stopped; this is not an emergency stop.")
+                            }
+                    }
+                    Text("Opt in for this foreground session. Switching modes disconnects the gateway and drops local control; an existing lease may take time to expire. Verify the robot has stopped before switching.")
+                        .font(.footnote).foregroundStyle(.secondary)
+                }
             }
         }
         .heliosScreen()
         .scrollDismissesKeyboard(.interactively)
         .navigationTitle("Connect")
     }
+
+    private func requestDeveloperMode() { showDeveloperConfirmation = true }
+    private func enterDeveloperMode() { connection.setDeveloperMode(true, access: developerAccess) }
+    private func leaveDeveloperMode() { connection.setDeveloperMode(false, access: developerAccess) }
 
     private func connect() {
         focusedField = nil

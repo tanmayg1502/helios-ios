@@ -2,10 +2,11 @@ import XCTest
 
 /// Opt-in integration scheme: start the documented local gateway fixture on port 18080 first.
 final class GatewayUITests: XCTestCase {
+    #if DEBUG
     @MainActor func testConnectReadTelemetryDisconnectAndDemo() throws {
         let app = XCUIApplication()
         app.launch()
-        app.tabBars.buttons["Connect"].tap()
+        enableDeveloperMode(app)
         let endpoint = app.textFields["Gateway URL"]
         XCTAssertTrue(endpoint.waitForExistence(timeout: 5))
         endpoint.tap()
@@ -20,13 +21,14 @@ final class GatewayUITests: XCTestCase {
         XCTAssertTrue(app.descendants(matching: .any)["odometryFrame"].exists)
         XCTAssertTrue(app.descendants(matching: .any)["odometryBodyFrame"].exists)
         let shot = XCTAttachment(screenshot: app.screenshot())
-        shot.name = "Live gateway fixture telemetry"
+        shot.name = "Developer fixture telemetry"
         shot.lifetime = .keepAlways
         add(shot)
         app.tabBars.buttons["Connect"].tap()
         app.buttons["Disconnect"].tap()
         XCTAssertTrue(app.staticTexts["Disconnected"].waitForExistence(timeout: 5))
-        app.buttons["Use demo mode"].tap()
+        app.swipeUp()
+        app.buttons["Use local sample"].tap()
         app.tabBars.buttons["Overview"].tap()
         XCTAssertTrue(app.staticTexts["Built to explore."].waitForExistence(timeout: 5))
     }
@@ -34,7 +36,7 @@ final class GatewayUITests: XCTestCase {
     @MainActor func testOperationsFixtureConfirmationStartAndStop() throws {
         let app = XCUIApplication()
         app.launch()
-        app.tabBars.buttons["Connect"].tap()
+        enableDeveloperMode(app)
         let endpoint = app.textFields["Gateway URL"]
         XCTAssertTrue(endpoint.waitForExistence(timeout: 5))
         endpoint.tap()
@@ -66,5 +68,48 @@ final class GatewayUITests: XCTestCase {
         expectation(for: NSPredicate(format: "exists == false"), evaluatedWith: stop)
         waitForExpectations(timeout: 8)
     }
+
+    @MainActor private func enableDeveloperMode(_ app: XCUIApplication) {
+        app.tabBars.buttons["Connect"].tap()
+        let enable = app.buttons["Enable developer mode"]
+        app.swipeUp()
+        XCTAssertTrue(enable.waitForExistence(timeout: 5))
+        enable.tap()
+        app.buttons["Enable simulation"].tap()
+        app.swipeDown()
+    }
+
+    @MainActor func testLaunchShowsNoSamplesAndSimulationRequiresOptIn() throws {
+        let app = XCUIApplication()
+        app.launch()
+        XCTAssertTrue(app.staticTexts["No live readings"].waitForExistence(timeout: 5))
+        XCTAssertFalse(app.staticTexts["Built to explore."].exists)
+        app.tabBars.buttons["Map"].tap()
+        XCTAssertTrue(app.staticTexts["Live map unavailable"].waitForExistence(timeout: 5))
+        enableDeveloperMode(app)
+        app.tabBars.buttons["Overview"].tap()
+        XCTAssertTrue(app.staticTexts["DEVELOPER MODE • Simulation only"].exists)
+        XCTAssertTrue(app.staticTexts["Built to explore."].exists)
+        XCUIDevice.shared.press(.home)
+        app.activate()
+        XCTAssertTrue(app.staticTexts["No live readings"].waitForExistence(timeout: 5))
+        XCTAssertFalse(app.staticTexts["Built to explore."].exists)
+    }
+
+    #else
+    @MainActor func testDistributionBuildFailsClosedWithoutVerifiedEligibility() throws {
+        let app = XCUIApplication()
+        app.launch()
+        XCTAssertTrue(app.staticTexts["No live readings"].waitForExistence(timeout: 5))
+        XCTAssertFalse(app.staticTexts["Built to explore."].exists)
+        app.tabBars.buttons["Map"].tap()
+        XCTAssertTrue(app.staticTexts["Live map unavailable"].waitForExistence(timeout: 5))
+        app.tabBars.buttons["Connect"].tap()
+        app.swipeUp()
+        XCTAssertFalse(app.buttons["Enable developer mode"].exists)
+        XCTAssertFalse(app.buttons["Use local sample"].exists)
+        XCTAssertFalse(app.staticTexts["DEVELOPER MODE • Simulation only"].exists)
+    }
+    #endif
 
 }
